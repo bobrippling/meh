@@ -183,6 +183,8 @@ void backend_init(){
 	backend_setaspect(1, 1);
 	gc = XCreateGC(display, window, 0, NULL);
 
+	XStoreName(display, window, "meh");
+
 	XMapRaised(display, window);
 	XSelectInput(display, window, StructureNotifyMask | ExposureMask | KeyPressMask);
 	XFlush(display);
